@@ -59,40 +59,11 @@ async function searchCountry() {
         
         `;
     } else {
-        resultDiv.innerHTML = `<h6>You should apply for the visa at one of the VfT branches in Germany if you have a citizenship from the countries below whose citizens are allowed to enter Türkiye with their national ID’S<h6/>
-          <br>
-          1. Germany
-          2. Belgium
-          3. France
-          4. Georgia
-          5. The Netherlands
-          6. Spain
-          7. Switzerland
-          8. Italy
-          9. Turkish Republic of Northern Cyprus
-          10. Liechtenstein
-          11. Luxemburg
-          12. Malta
-          13. Portugal
-          14. Ukraine
-          15. Greece
-          16- Poland
-          17- Bulgaria
-          18- Hungary
-          19- Moldova
-          20- Azerbaijan
-          <br>
-          <h6>Countries whose citizens are allowed to enter Türkiye with their expired passports<h6/>
-          <br>
-          1. Germany – Passports expired within the last year / ID’s expired within the last year
-          2. Belgium - Passports expired within the last 5 years.
-          3. France - Passports expired within the last 5 years.
-          4. Spain - Passports expired within the last 5 years.
-          5. Switzerland - Passports expired within the last 5 years.
-          6. Luxemburg - Passports expired within the last 5 years.
-          7. Portugal - Passports expired within the last 5 years.
-          8. Bulgaria – Valid ordinary passport
-          <br>
+        resultDiv.innerHTML = `
+            Probably you need to apply for the visa. However, try to read the popover information opening after clicking the blue button to check your status!
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Click Before Read 
+            </button>
         `;
     }
 

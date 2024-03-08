@@ -95,5 +95,5 @@ async function searchCountry() {
         `;
     }
     
-    countryInput.reset() = '';
+    countryInput.value = '';
 }

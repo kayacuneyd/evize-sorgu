@@ -35,7 +35,7 @@ async function searchCountry() {
         resultDiv.innerHTML = `For ${country.country} için bayrak URL'si: <img src="${country.flag_url}" />`;
     } else {
         resultDiv.innerHTML = `<h6>You should apply for the visa at one of the VfT branches in Germany if you have a citizenship from the countries below whose citizens are allowed to enter Türkiye with their national ID’S<h6/>
-
+          <br>
           1. Germany
           2. Belgium
           3. France
@@ -56,9 +56,9 @@ async function searchCountry() {
           18- Hungary
           19- Moldova
           20- Azerbaijan
-          
+          <br>
           <h6>Countries whose citizens are allowed to enter Türkiye with their expired passports<h6/>
-          
+          <br>
           1. Germany – Passports expired within the last year / ID’s expired within the last year
           2. Belgium - Passports expired within the last 5 years.
           3. France - Passports expired within the last 5 years.
@@ -67,6 +67,7 @@ async function searchCountry() {
           6. Luxemburg - Passports expired within the last 5 years.
           7. Portugal - Passports expired within the last 5 years.
           8. Bulgaria – Valid ordinary passport
+          <br>
         `;
     }
 }

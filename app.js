@@ -32,7 +32,33 @@ async function searchCountry() {
     const country = countries.find(c => c.country.toLowerCase() === countryInput);
 
     if (country) {
-        resultDiv.innerHTML = `For ${country.country} için bayrak URL'si: <img src="${country.flag_url}" />`;
+        resultDiv.innerHTML = `
+        
+        For ${country.country} için bayrak URL'si: <img src="${country.flag_url}" />
+        <div class="card shadow mx-auto">
+              <div class="card-body">
+                  <div class="lc-block">
+                      <img class="img-fluid" src="${country.flag_url}" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Flag icon of ${country.country}" loading="lazy">
+                  </div>
+                  <div class="card-body">
+                      <div class="lc-block mb-3">
+                          <div editable="rich">
+
+                              <h2 class="h5">${country.country}</h2>
+
+                              <p>You can apply for e-visa to travel to Turkey.</p>
+                          </div>
+                      </div>
+                      <div class="lc-block">
+                          <a class="btn btn-primary" target="_blank" href="https://evisa.gov.tr/en/apply/" role="button">Go and Apply</a>
+                      </div>
+
+
+                  </div>
+              </div>
+          </div>
+        
+        `;
     } else {
         resultDiv.innerHTML = `<h6>You should apply for the visa at one of the VfT branches in Germany if you have a citizenship from the countries below whose citizens are allowed to enter Türkiye with their national ID’S<h6/>
           <br>

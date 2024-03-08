@@ -34,7 +34,6 @@ async function searchCountry() {
     if (country) {
         resultDiv.innerHTML = `
         
-        For ${country.country} için bayrak URL'si: <img src="${country.flag_url}" />
         <div class="card shadow mx-auto">
               <div class="card-body">
                   <div class="lc-block">
@@ -52,7 +51,6 @@ async function searchCountry() {
                       <div class="lc-block">
                           <a class="btn btn-primary" target="_blank" href="https://evisa.gov.tr/en/apply/" role="button">Go and Apply</a>
                       </div>
-
 
                   </div>
               </div>

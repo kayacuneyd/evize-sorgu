@@ -18,12 +18,14 @@ async function loadCountries() {
 
 
 async function searchCountry() {
+    
     const countries = await loadCountries();
 
     if (!countries) {
         console.error('Ülkeler yüklenemedi veya veri boş.');
         return;
     }
+    e.preventDefault(); // Formun varsayılan gönderme işlemini engelle
 
     const countryInput = document.getElementById('countryInput').value.trim().toLowerCase();
     const resultDiv = document.getElementById('result');
@@ -95,5 +97,5 @@ async function searchCountry() {
         `;
     }
     
-    countryInput.value = '';
+    this.reset();
 }

@@ -37,7 +37,7 @@ async function searchCountry() {
         <div class="card shadow mx-auto">
               <div class="card-body">
                   <div class="lc-block">
-                      <img class="img-fluid" src="${country.flag_url}" sizes="(max-width: 1080px) 100vw, 1080px" width="1080" height="1080" alt="Flag icon of ${country.country}" loading="lazy">
+                      <img class="img-fluid" src="${country.flag_url}" sizes="(max-width: 1080px) 100vw, 540px" width="540" height="540" alt="Flag icon of ${country.country}" loading="lazy">
                   </div>
                   <div class="card-body">
                       <div class="lc-block mb-3">

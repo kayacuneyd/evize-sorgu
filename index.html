@@ -15,10 +15,6 @@
         <div class="lc-block card border-0 text-center rounded p-4 p-lg-6">
             <div class="row card-body mb-3 mb-lg-4">
                 <div class="col-xl-11 col-xxl-10 mx-auto">
-                    <div class="lc-block mb-5">
-                        <p class="text-uppercase" editable="inline">Going to Turkey</p>
-                        <h3 editable="inline" class="fw-bold display-2">with e-visa <span class="text-primary">or NOT</span>?</h3>
-                    </div>
 
                     <div class="lc-block mb-4">
                         <div class="d-flex flex-wrap justify-content-center gap-3">
@@ -30,11 +26,43 @@
         </div>
     </div>
 
-    <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white-50">
-        <div class="container text-center">
-            <small>Copyright &copy; <a href="https://kayacuneyt.com" target="_blank">Cüneyt Kaya</a></small>
-        </div>
-    </footer>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+          <div class="inner">
+            <h3 class="masthead-brand">Cover</h3>
+            <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Contact</a>
+            </nav>
+          </div>
+        </header>
+  
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">Cover your page.</h1>
+
+          
+
+            <p class="lead">
+                <input type="text" id="countryInput" placeholder="Ülke adı girin">    
+                <button class="btn text-white btn-lg btn-primary" onclick="searchCountry()">Ara</button>          
+            </p>
+
+
+            <div class="lc-block mb-4">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <div id="result"></div>
+                </div>
+            </div>
+
+        </main>
+  
+        <footer class="mastfoot mt-auto">
+          <div class="inner">
+            <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+          </div>
+        </footer>
+    </div>
 
     <script src="app.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

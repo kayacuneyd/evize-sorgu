@@ -32,9 +32,9 @@ async function searchCountry() {
     const country = countries.find(c => c.country.toLowerCase() === countryInput);
 
     if (country) {
-        resultDiv.innerHTML = `${country.country} için bayrak URL'si: <img src="${country.flag_url}" />`;
+        resultDiv.innerHTML = `For ${country.country} için bayrak URL'si: <img src="${country.flag_url}" />`;
     } else {
-        resultDiv.innerHTML = `You should apply for the visa at one of the VfT branches in Germany if you have a citizenship from the countries below whose citizens are allowed to enter Türkiye with their national ID’S
+        resultDiv.innerHTML = `<h6>You should apply for the visa at one of the VfT branches in Germany if you have a citizenship from the countries below whose citizens are allowed to enter Türkiye with their national ID’S<h6/>
 
           1. Germany
           2. Belgium
@@ -57,7 +57,7 @@ async function searchCountry() {
           19- Moldova
           20- Azerbaijan
           
-          Countries whose citizens are allowed to enter Türkiye with their expired passports
+          <h6>Countries whose citizens are allowed to enter Türkiye with their expired passports<h6/>
           
           1. Germany – Passports expired within the last year / ID’s expired within the last year
           2. Belgium - Passports expired within the last 5 years.

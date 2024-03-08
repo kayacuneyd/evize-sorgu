@@ -94,4 +94,6 @@ async function searchCountry() {
           <br>
         `;
     }
+    
+    inputElement.value = '';
 }

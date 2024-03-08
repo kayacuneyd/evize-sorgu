@@ -32,8 +32,8 @@ async function searchCountry() {
     const country = countries.find(c => c.country.toLowerCase() === countryInput);
 
     if (country) {
-        resultDiv.innerHTML = `${country.country} için bayrak URL'si: ${country.flag_url}`;
+        resultDiv.innerHTML = `${country.country} için bayrak URL'si: <img src="${country.flag_url}" />`;
     } else {
-        resultDiv.innerHTML = "Ülke bulunamadı veya e-vize durumu bilinmiyor.";
+        resultDiv.innerHTML = "You should apply for the visa at one of the VfT branches in Germany if you hold a residence permit in Germany.";
     }
 }

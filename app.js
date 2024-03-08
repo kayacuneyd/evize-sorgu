@@ -25,7 +25,6 @@ async function searchCountry() {
         console.error('Ülkeler yüklenemedi veya veri boş.');
         return;
     }
-    e.preventDefault(); // Formun varsayılan gönderme işlemini engelle
 
     const countryInput = document.getElementById('countryInput').value.trim().toLowerCase();
     const resultDiv = document.getElementById('result');

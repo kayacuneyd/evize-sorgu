@@ -95,6 +95,7 @@ async function searchCountry() {
           <br>
         `;
     }
-    
-    this.reset();
+
+    countryInput = document.getElementById('countryInput').value = '';
+
 }

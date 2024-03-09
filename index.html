@@ -17,23 +17,26 @@
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
         <header class="masthead mb-auto">
           <div class="inner">
-            <h4 class="masthead-brand">E-VisaStatusCheck</h4>
+            <h4 class="masthead-brand">EVisaSorgu</h4>
 
             <nav class="nav nav-masthead justify-content-center">
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#ohneVisaModal">
+                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#ohneVisaModal">
                     Read Before Click
+                </button>
+                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#expiredPassModal">
+                    Expired Passport
                 </button>
             </nav>
 
-            <!-- Modal -->
+            <!-- Modal 1-->
             <div class="modal fade" id="ohneVisaModal" tabindex="-1" role="dialog" aria-labelledby="ohneVisaModalLabel" aria-hidden="true">
                 <div class="modal-dialog  text-black" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h6>You should apply for the visa at one of the VfT branches in Germany if you have a citizenship from the countries below whose citizens are allowed to enter Türkiye with their national IDs</h6>
+                        <h6>The citizens of countries who are allowed to enter Türkiye with their national IDs - no need to visa!!!</h6>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body text-left">
                         <div class="container">
                             <ol>
                                 <li>Germany</li>
@@ -57,8 +60,24 @@
                                 <li>Moldova</li>
                                 <li>Azerbaijan</li>
                             </ol>
-                    
-                            <h6>Countries whose citizens are allowed to enter Türkiye with their expired passports</h6>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            <!-- Modal 2-->
+            <div class="modal fade" id="expiredPassModal" tabindex="-1" role="dialog" aria-labelledby="expiredPassModalLabel" aria-hidden="true">
+                <div class="modal-dialog  text-black" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6>The citizens of countries who are allowed to enter Türkiye with their expired passports</h6>
+                    </div>
+                    <div class="modal-body text-left">
+                        <div class="container">
                             <ol>
                                 <li>Germany – Passports expired within the last year / IDs expired within the last year</li>
                                 <li>Belgium - Passports expired within the last 5 years.</li>
@@ -77,6 +96,7 @@
                 </div>
                 </div>
             </div>
+            
 
           </div>
         </header>

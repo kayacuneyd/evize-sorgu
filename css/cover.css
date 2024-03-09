@@ -44,6 +44,11 @@ body {
   max-width: 42em;
 }
 
+.molle-regular-italic {
+  font-family: "Molle", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
 
 /*
  * Header

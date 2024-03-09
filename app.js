@@ -61,6 +61,7 @@ async function searchCountry() {
     } else {
         resultDiv.innerHTML = `
             Probably you need to apply for the visa. However, try to read the popover information opening after clicking the blue button to check your status!
+            <br>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Click Before Read 
             </button>

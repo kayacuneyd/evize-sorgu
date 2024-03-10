@@ -42,6 +42,11 @@ async function searchCountry() {
         <div class="card mx-auto">
               <div class="card-body">
                   <div class="lc-block">
+                    <a class="btn btn-info" href="/" role="button">
+                        Search Again
+                    </a>
+                  </div>
+                  <div class="lc-block">
                       <img class="img-fluid" src="${country.flag_url}" sizes="(max-width: 270px) 100vw, 270px" width="270" height="270" alt="Flag icon of ${country.country}" loading="lazy">
                   </div>
                   <div class="card-body">

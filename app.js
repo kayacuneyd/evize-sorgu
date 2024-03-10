@@ -56,7 +56,7 @@ async function searchCountry() {
     const country = countries.find(c => c.country.toLowerCase() === countryInput);
 
     if (country) {
-        showModal( `
+        resultDiv.innerHTML = `
         
         <div class="card mx-auto">
               <div class="card-body">
@@ -80,15 +80,15 @@ async function searchCountry() {
               </div>
           </div>
         
-        `);
+        `;
     } else {
-        showModal(`
+        resultDiv.innerHTML = `
             Probably you need to apply for the visa. However, try to read the popover information opening after clicking the blue button to check your status!
             <br>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Click Before Read 
             </button>
-        `);
+        `;
     }
 
     countryInput = document.getElementById('countryInput').value = '';

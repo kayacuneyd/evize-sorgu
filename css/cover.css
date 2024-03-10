@@ -104,31 +104,6 @@ body {
   font-weight: 700;
 }
 
-/*
-* Modal
-*/
-
-.modal {
-  display: none; /* Başlangıçta gizle */
-  position: fixed; /* Sabit pozisyon */
-  z-index: 1; /* Diğer içeriklerin üstünde */
-  left: 0;
-  top: 0;
-  max-width: 100%; /* Tam genişlik */
-  max-height: 100%; /* Tam yükseklik */
-  overflow: auto; /* Gerekirse kaydırma çubuğu */
-  background-color: rgb(0,0,0); /* Arkaplan rengi */
-  background-color: rgba(0,0,0,0.4); /* Siyah w/ opaklık */
-}
-
-/* Modal içeriği */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto; /* Orta */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Genişlik */
-}
 
 /* Kapat butonu */
 .close {

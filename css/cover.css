@@ -90,7 +90,9 @@ body {
   .nav-masthead {
     float: right;
   }
+}
 
+@media (min-width: 320px) {
   .naviInnerHeader{
     display: flex;
     flex-direction: column;

@@ -92,7 +92,7 @@ body {
   }
 }
 
-@media (min-width: 320px) {
+@media (max-width: 320px) {
   .naviInnerHeader{
     display: flex;
     flex-direction: column;

@@ -16,48 +16,51 @@
 <body body class="text-center">   
     
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
-          <div class="inner">
-            <p class="lead molle-regular-italic">EVisaSorgu</p>
-            <nav class="nav nav-masthead justify-content-center">
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-warning btn-sm mx-1" data-toggle="modal" data-target="#ohneVisaModal">
-                    Without Visa?
-                </button>
-                <button type="button" class="btn btn-success btn-sm mx-1" data-toggle="modal" data-target="#expiredPassModal">
-                    Expired Pass?
-                </button>
-            </nav>
-          </div>
-        </header>
-  
-        <main role="main" class="inner cover">
-          <h4 class="cover-heading">Look for your status!</h4>
-          <div class="input-group mb-3">
-            <input type="text" id="countryInput" class="form-control" placeholder="Country name" aria-label="Type your country name" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button class="btn btn-primary" onclick="searchCountry()" type="button">Search</button>
-            </div>
-          </div>
+                <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+                    <header class="masthead mb-auto">
+                        <div class="inner">
+                            <a class="lead molle-regular-italic" href="/">EVisaSorgu</a>
+                            <nav class="nav nav-masthead justify-content-center">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-warning btn-sm mx-1" data-toggle="modal" data-target="#ohneVisaModal">
+                                    Without Visa?
+                                </button>
+                                <button type="button" class="btn btn-success btn-sm mx-1" data-toggle="modal" data-target="#expiredPassModal">
+                                    Expired Pass?
+                                </button>
+                            </nav>
+                        </div>
+                    </header>
+            
+                    <main role="main" class="inner cover">
+                        <div class="lc-block mb-4" id="sorgu"> 
+                            <h4 class="cover-heading">Look for your status!</h4>
+                            <div class="input-group mb-3">
+                                <input type="text" id="countryInput" class="form-control" placeholder="Country name" aria-label="Type your country name" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" onclick="searchCountry()" type="button">Search</button>
+                                </div>
+                            </div>
 
-          <p class="">
-            An e-Visa for Turkey is a digital travel authorization allowing entry and travel within the country, serving as an alternative to traditional visa processes. 
-            It's obtained online through a simple application process that includes providing necessary information and paying with a credit or debit card. 
-          </p>
-          <div class="lc-block mb-4">
-                <div class="d-flex flex-wrap justify-content-center gap-3">
-                    <div id="result"></div>
+                            <p class="">
+                                An e-Visa for Turkey is a digital travel authorization allowing entry and travel within the country, serving as an alternative to traditional visa processes. 
+                                It's obtained online through a simple application process that includes providing necessary information and paying with a credit or debit card. 
+                            </p>   
+                        </div>
+                        
+                        <div class="lc-block mb-4">
+                            <div class="d-flex flex-wrap justify-content-center gap-3">
+                                <div id="result"></div>
+                            </div>
+                        </div>
+                    </main>
+            
+                    <footer class="mastfoot mt-auto">
+                        <div class="inner">
+                            <p>Designed by <a href="https://kayacuneyt.com/" target="_blank">Cüneyt Kaya</a>.</p>
+                        </div>
+                    </footer>
                 </div>
-           </div>
-        </main>
-  
-        <footer class="mastfoot mt-auto">
-          <div class="inner">
-            <p>Designed by <a href="https://kayacuneyt.com/" target="_blank">Cüneyt Kaya</a>.</p>
-          </div>
-        </footer>
-    </div>
 
                 <!-- Modal 1-->
                 <div class="modal fade" id="ohneVisaModal" tabindex="-1" role="dialog" aria-labelledby="ohneVisaModalLabel" aria-hidden="true">

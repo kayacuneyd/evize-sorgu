@@ -2,28 +2,6 @@
 const gistUrl =
   "https://gist.github.com/kayacuneyd/08f9d3656cbccf9634d2ee2894be5e1f";
 
-// Modalı göster
-function showModal(searchResult) {
-    // Arama sonucunu modal içine yerleştir
-    document.getElementById('searchResult').innerHTML = searchResult;
-    
-    // Modalı göster
-    var modal = document.getElementById('searchModal');
-    modal.style.display = "block";
-  
-    // Kapat butonunu al ve tıklandığında modalı kapat
-    var span = document.getElementsByClassName("close")[0];
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-  
-    // Kullanıcı modal dışında bir yere tıklarsa, modalı kapat
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
- }
 
 async function loadCountries() {
     try {
@@ -51,11 +29,14 @@ async function searchCountry() {
 
     const countryInput = document.getElementById('countryInput').value.trim().toLowerCase();
     const resultDiv = document.getElementById('result');
+    const sorgu = document.getElementById('sorgu');
 
     // "country" alanını kullanarak arama yapın
     const country = countries.find(c => c.country.toLowerCase() === countryInput);
 
     if (country) {
+        // Mevcut içeriği temizle
+        sorgu.innerHTML = '';
         resultDiv.innerHTML = `
         
         <div class="card mx-auto">
@@ -64,17 +45,17 @@ async function searchCountry() {
                       <img class="img-fluid" src="${country.flag_url}" sizes="(max-width: 270px) 100vw, 270px" width="270" height="270" alt="Flag icon of ${country.country}" loading="lazy">
                   </div>
                   <div class="card-body">
-                      <div class="lc-block mb-3">
+                    <div class="lc-block mb-3">
                           <div editable="rich">
 
                               <h2 class="h5">${country.country}</h2>
 
                               <p>You can apply for e-visa to travel to Turkey.</p>
                           </div>
-                      </div>
-                      <div class="lc-block">
+                    </div>
+                    <div class="lc-block">
                           <a class="btn btn-primary" target="_blank" href="https://evisa.gov.tr/en/apply/" role="button">Go and Apply</a>
-                      </div>
+                    </div>
 
                   </div>
               </div>
@@ -91,6 +72,6 @@ async function searchCountry() {
         `;
     }
 
-    countryInput = document.getElementById('countryInput').value = '';
+    document.getElementById('countryInput').value = '';
 
 }

@@ -10,125 +10,121 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Molle&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
-    <!-- Custom styles for this template -->
+    <!-- Custom styles -->
     <link href="css/cover.css" rel="stylesheet">
 </head>
 <body body class="text-center">   
-    
-
-                <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-                    <header class="masthead mb-auto">
-                        <div class="inner">
-                            <a class="lead molle-regular-italic" href="/">EVisaSorgu</a>
-                            <nav class="nav nav-masthead justify-content-center">
-                                <!-- Button trigger modal -->
-                                <button type="button" class="btn btn-warning btn-sm mx-1" data-toggle="modal" data-target="#ohneVisaModal">
-                                    Without Visa?
-                                </button>
-                                <button type="button" class="btn btn-success btn-sm mx-1" data-toggle="modal" data-target="#expiredPassModal">
-                                    Expired Pass?
-                                </button>
-                            </nav>
-                        </div>
-                    </header>
-            
-                    <main role="main" class="inner cover">
-                        <div class="lc-block mb-4" id="sorgu"> 
-                            <h4 class="cover-heading">Look for your status!</h4>
-                            <div class="input-group mb-3">
-                                <input type="text" id="countryInput" class="form-control" placeholder="Country name" aria-label="Type your country name" aria-describedby="basic-addon2">
-                                <div class="input-group-append">
-                                    <button class="btn btn-primary" onclick="searchCountry()" type="button">Search</button>
-                                </div>
-                            </div>
-
-                            <p class="">
-                                An e-Visa for Turkey is a digital travel authorization allowing entry and travel within the country, serving as an alternative to traditional visa processes. 
-                                It's obtained online through a simple application process that includes providing necessary information and paying with a credit or debit card. 
-                            </p>   
-                        </div>
-                        
-                        <div class="lc-block mb-4">
-                            <div class="d-flex flex-wrap justify-content-center gap-3">
-                                <div id="result"></div>
-                            </div>
-                        </div>
-                    </main>
-            
-                    <footer class="mastfoot mt-auto">
-                        <div class="inner">
-                            <p>Designed by <a href="https://kayacuneyt.com/" target="_blank">Cüneyt Kaya</a>.</p>
-                        </div>
-                    </footer>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner justify-content-space-betweem">
+                <div class="">
+                    <a class="lead molle-regular-italic" href="/">EVisaSorgu</a>
                 </div>
-
-                <!-- Modal 1-->
-                <div class="modal fade" id="ohneVisaModal" tabindex="-1" role="dialog" aria-labelledby="ohneVisaModalLabel" aria-hidden="true">
-                    <div class="modal-dialog  text-black" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h6>The citizens of countries who are allowed to enter Türkiye with their national IDs - no need to visa!!!</h6>
-                        </div>
-                        <div class="modal-body text-left">
-                            <div class="container">
-                                <ol>
-                                    <li>Germany</li>
-                                    <li>Belgium</li>
-                                    <li>France</li>
-                                    <li>Georgia</li>
-                                    <li>The Netherlands</li>
-                                    <li>Spain</li>
-                                    <li>Switzerland</li>
-                                    <li>Italy</li>
-                                    <li>Turkish Republic of Northern Cyprus</li>
-                                    <li>Liechtenstein</li>
-                                    <li>Luxemburg</li>
-                                    <li>Malta</li>
-                                    <li>Portugal</li>
-                                    <li>Ukraine</li>
-                                    <li>Greece</li>
-                                    <li>Poland</li>
-                                    <li>Bulgaria</li>
-                                    <li>Hungary</li>
-                                    <li>Moldova</li>
-                                    <li>Azerbaijan</li>
-                                </ol>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
+                <nav class="nav nav-masthead justify-content-center">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-warning btn-sm mx-1" data-toggle="modal" data-target="#ohneVisaModal">
+                        Without Visa?
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm mx-1" data-toggle="modal" data-target="#expiredPassModal">
+                        Expired Pass?
+                    </button>
+                </nav>
+            </div>
+        </header>
+        <main role="main" class="inner cover">
+            <div class="lc-block mb-4" id="sorgu"> 
+                <h4 class="cover-heading">Look for your status!</h4>
+                <div class="input-group mb-3">
+                    <input type="text" id="countryInput" class="form-control" placeholder="Country name" aria-label="Type your country name" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" onclick="searchCountry()" type="button">Search</button>
                     </div>
                 </div>
-    
-                <!-- Modal 2-->
-                <div class="modal fade" id="expiredPassModal" tabindex="-1" role="dialog" aria-labelledby="expiredPassModalLabel" aria-hidden="true">
-                    <div class="modal-dialog  text-black" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h6>The citizens of countries who are allowed to enter Türkiye with their expired passports</h6>
-                        </div>
-                        <div class="modal-body text-left">
-                            <div class="container">
-                                <ol>
-                                    <li>Germany – Passports expired within the last year / IDs expired within the last year</li>
-                                    <li>Belgium - Passports expired within the last 5 years.</li>
-                                    <li>France - Passports expired within the last 5 years.</li>
-                                    <li>Spain - Passports expired within the last 5 years.</li>
-                                    <li>Switzerland - Passports expired within the last 5 years.</li>
-                                    <li>Luxemburg - Passports expired within the last 5 years.</li>
-                                    <li>Portugal - Passports expired within the last 5 years.</li>
-                                    <li>Bulgaria – Valid ordinary passport</li>
-                                </ol>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                    </div>
+                <p class="">
+                    An e-Visa for Turkey is a digital travel authorization allowing entry and travel within the country, serving as an alternative to traditional visa processes. 
+                    It's obtained online through a simple application process that includes providing necessary information and paying with a credit or debit card. 
+                </p>   
+            </div>
+            <div class="lc-block mb-4">
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <div id="result"></div>
                 </div>
+            </div>
+        </main>
+        <footer class="mastfoot mt-auto">
+            <div class="inner">
+                <p>Designed by <a href="https://kayacuneyt.com/" target="_blank">Cüneyt Kaya</a>.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal 1-->
+    <div class="modal fade" id="ohneVisaModal" tabindex="-1" role="dialog" aria-labelledby="ohneVisaModalLabel" aria-hidden="true">
+        <div class="modal-dialog  text-black" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6>The citizens of countries who are allowed to enter Türkiye with their national IDs - no need to visa!!!</h6>
+            </div>
+            <div class="modal-body text-left">
+                <div class="container">
+                    <ol>
+                        <li>Germany</li>
+                        <li>Belgium</li>
+                        <li>France</li>
+                        <li>Georgia</li>
+                        <li>The Netherlands</li>
+                        <li>Spain</li>
+                        <li>Switzerland</li>
+                        <li>Italy</li>
+                        <li>Turkish Republic of Northern Cyprus</li>
+                        <li>Liechtenstein</li>
+                        <li>Luxemburg</li>
+                        <li>Malta</li>
+                        <li>Portugal</li>
+                        <li>Ukraine</li>
+                        <li>Greece</li>
+                        <li>Poland</li>
+                        <li>Bulgaria</li>
+                        <li>Hungary</li>
+                        <li>Moldova</li>
+                        <li>Azerbaijan</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Modal 2-->
+    <div class="modal fade" id="expiredPassModal" tabindex="-1" role="dialog" aria-labelledby="expiredPassModalLabel" aria-hidden="true">
+        <div class="modal-dialog  text-black" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6>The citizens of countries who are allowed to enter Türkiye with their expired passports</h6>
+            </div>
+            <div class="modal-body text-left">
+                <div class="container">
+                    <ol>
+                        <li>Germany – Passports expired within the last year / IDs expired within the last year</li>
+                        <li>Belgium - Passports expired within the last 5 years.</li>
+                        <li>France - Passports expired within the last 5 years.</li>
+                        <li>Spain - Passports expired within the last 5 years.</li>
+                        <li>Switzerland - Passports expired within the last 5 years.</li>
+                        <li>Luxemburg - Passports expired within the last 5 years.</li>
+                        <li>Portugal - Passports expired within the last 5 years.</li>
+                        <li>Bulgaria – Valid ordinary passport</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
 
     <script src="app.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

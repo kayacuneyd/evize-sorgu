@@ -90,6 +90,11 @@ body {
   .nav-masthead {
     float: right;
   }
+
+  .naviInnerHeader{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 

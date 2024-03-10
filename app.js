@@ -2,6 +2,29 @@
 const gistUrl =
   "https://gist.github.com/kayacuneyd/08f9d3656cbccf9634d2ee2894be5e1f";
 
+// Modalı göster
+function showModal(searchResult) {
+    // Arama sonucunu modal içine yerleştir
+    document.getElementById('searchResult').innerHTML = searchResult;
+    
+    // Modalı göster
+    var modal = document.getElementById('searchModal');
+    modal.style.display = "block";
+  
+    // Kapat butonunu al ve tıklandığında modalı kapat
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+  
+    // Kullanıcı modal dışında bir yere tıklarsa, modalı kapat
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+ }
+
 async function loadCountries() {
     try {
         const response = await fetch('https://gist.githubusercontent.com/kayacuneyd/08f9d3656cbccf9634d2ee2894be5e1f/raw/924ed24d3644a298c6ff08432925ad3e2846769a/data.json');
@@ -33,7 +56,7 @@ async function searchCountry() {
     const country = countries.find(c => c.country.toLowerCase() === countryInput);
 
     if (country) {
-        resultDiv.innerHTML = `
+        showModal( `
         
         <div class="card mx-auto">
               <div class="card-body">
@@ -57,15 +80,15 @@ async function searchCountry() {
               </div>
           </div>
         
-        `;
+        `);
     } else {
-        resultDiv.innerHTML = `
+        showModal(`
             Probably you need to apply for the visa. However, try to read the popover information opening after clicking the blue button to check your status!
             <br>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 Click Before Read 
             </button>
-        `;
+        `);
     }
 
     countryInput = document.getElementById('countryInput').value = '';

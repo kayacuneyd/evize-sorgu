@@ -1,6 +1,6 @@
 async function loadCountries() {
     try {
-        const response = await fetch('https://gist.githubusercontent.com/kayacuneyd/08f9d3656cbccf9634d2ee2894be5e1f/raw/34b4631fad2ff1121ee6b0281da7a811c0ed3881/data.json');
+        const response = await fetch('https://gist.githubusercontent.com/kayacuneyd/08f9d3656cbccf9634d2ee2894be5e1f/raw/cc0699c00485eb31969728715f859224c36ad01d/data.json');
         if (!response.ok) {
             throw new Error('Veri yüklenemedi: ' + response.statusText);
         }

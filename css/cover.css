@@ -44,10 +44,10 @@ body {
   max-width: 42em;
 }
 
-.molle-regular-italic {
-  font-family: "Molle", cursive;
-  font-weight: 400;
-  font-style: italic;
+.delius-unicase-bold {
+  font-family: "Delius Unicase", cursive;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /*

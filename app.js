@@ -32,6 +32,7 @@ async function searchCountry() {
                     <a class="btn btn-info" href="/" role="button">Search Again</a>
                     <img class="img-fluid" src="${country.flag_url}" alt="Flag of ${country.country}">
                     <h2>${country.country}</h2>
+                    <p>${country.status}</p>
                     <a class="btn btn-primary" target="_blank" href="https://evisa.gov.tr/en/apply/" role="button">Go and Apply</a>
                 </div>
             </div>

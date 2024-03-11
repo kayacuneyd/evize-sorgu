@@ -4,7 +4,8 @@ async function loadCountries() {
         if (!response.ok) {
             throw new Error('Veri yüklenemedi: ' + response.statusText);
         }
-        return await response.json(); // Doğrudan dizi döndürülüyor.
+        const data = await response.json();
+        return data.countries; // Burada `.countries` ile diziye erişiyoruz
     } catch (error) {
         console.error('Veri yükleme hatası:', error);
         return null;

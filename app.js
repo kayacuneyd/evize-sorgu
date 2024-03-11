@@ -30,7 +30,7 @@ async function searchCountry() {
             <div class="card mx-auto">
                 <div class="card-body">
                     <a class="btn btn-info" href="/" role="button">Search Again</a>
-                    <img class="img-fluid" width="384" src="${country.flag_url}" alt="Flag of ${country.country}">
+                    <img class="img-fluid" width="512" src="${country.flag_url}" alt="Flag of ${country.country}">
                     <h2>
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
                         <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>

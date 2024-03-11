@@ -1,6 +1,6 @@
 async function loadCountries() {
     try {
-        const response = await fetch('https://gist.githubusercontent.com/kayacuneyd/08f9d3656cbccf9634d2ee2894be5e1f/raw/70eb349134e4b7e4576b361c6e88c08a1798593f/data.json');
+        const response = await fetch('https://gist.githubusercontent.com/kayacuneyd/08f9d3656cbccf9634d2ee2894be5e1f/raw/34b4631fad2ff1121ee6b0281da7a811c0ed3881/data.json');
         if (!response.ok) {
             throw new Error('Veri yüklenemedi: ' + response.statusText);
         }
@@ -33,7 +33,12 @@ async function searchCountry() {
                     <img class="img-fluid" src="${country.flag_url}" alt="Flag of ${country.country}">
                     <h2>${country.country}</h2>
                     <p>${country.status}</p>
-                    <a class="btn btn-primary" target="_blank" href="https://evisa.gov.tr/en/apply/" role="button">Go and Apply</a>
+                    <a class="btn btn-primary" 
+                        target="_blank" 
+                        href="https://evisa.gov.tr/en/apply/" 
+                        role="button">
+                            Go and Apply
+                    </a>
                 </div>
             </div>
         `;

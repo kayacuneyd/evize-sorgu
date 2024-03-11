@@ -5,7 +5,7 @@ const gistUrl =
 
 async function loadCountries() {
     try {
-        const response = await fetch('https://gist.githubusercontent.com/kayacuneyd/08f9d3656cbccf9634d2ee2894be5e1f/raw/924ed24d3644a298c6ff08432925ad3e2846769a/data.json');
+        const response = await fetch('https://gist.githubusercontent.com/kayacuneyd/08f9d3656cbccf9634d2ee2894be5e1f/raw/70eb349134e4b7e4576b361c6e88c08a1798593f/data.json');
         if (!response.ok) {
             throw new Error('Veri yüklenemedi: ' + response.statusText);
         }
@@ -65,7 +65,12 @@ async function searchCountry() {
                           </div>
                     </div>
                     <div class="lc-block">
-                          <a class="btn btn-primary" target="_blank" href="https://evisa.gov.tr/en/apply/" role="button">Go and Apply</a>
+                          <a class="btn btn-primary" 
+                          target="_blank" 
+                          href="https://evisa.gov.tr/en/apply/" 
+                          role="button">
+                            Go and Apply
+                          </a>
                     </div>
 
                   </div>

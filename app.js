@@ -79,6 +79,7 @@ async function searchCountry() {
             <span class="">Probably you need to apply for the visa. 
             If you reside in Germany and want to go Türkiye, 
             go and visit one of our offices to complete your visa application. To get more info: 
+            <b>
             <a type="button" class="btn btn-primary" href="https://visaft.com/stuttgart/faq.php" target="_blank">
                 Click 
             </a>

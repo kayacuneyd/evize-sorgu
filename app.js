@@ -74,6 +74,7 @@ async function searchCountry() {
         
         `;
     } else {
+        sorgu.innerHTML = '';
         resultDiv.innerHTML = `
             <span class="">Probably you need to apply for the visa. 
             If you reside in Germany and want to go Türkiye, 

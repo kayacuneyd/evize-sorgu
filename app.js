@@ -61,7 +61,7 @@ async function searchCountry() {
                               ${country.country}
                               </h2>
 
-                              <p>You can apply for e-visa to travel to Turkey.</p>
+                              <p>${country.status}</p>
                           </div>
                     </div>
                     <div class="lc-block">
@@ -75,11 +75,13 @@ async function searchCountry() {
         `;
     } else {
         resultDiv.innerHTML = `
-            Probably you need to apply for the visa. However, try to read the popover information opening after clicking the blue button to check your status!
-            <br>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                Click Before Read 
-            </button>
+            <span class="">Probably you need to apply for the visa. 
+            If you reside in Germany and want to go Türkiye, 
+            go and visit one of our offices to complete your visa application. To get more info: 
+            <a type="button" class="btn btn-primary" href="https://visaft.com/stuttgart/faq.php" target="_blank">
+                Click 
+            </a>
+            </span>
         `;
     }
 

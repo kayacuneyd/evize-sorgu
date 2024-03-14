@@ -7,7 +7,7 @@ async function loadAndInitializeSelect2() {
     allCountries = data.countries.map(country => ({
         id: country.code, // id olarak ülke kodunu kullanıyoruz
         text: country.country, // text olarak ülke ismini kullanıyoruz
-        flag: country.country_flag,
+        flag: country.country_url,
         description: country.status
     }));
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
             document.getElementById('result').innerHTML = `
                 <div class="card mx-auto">
                     <div class="card-body">
-                        <img class="img-fluid" width="512" src="${country.flag_url}" alt="Flag of ${country.country}">
+                        <img class="img-fluid" width="512" src="${country.flag}" alt="Flag of ${country.country}">
                         <h2>${country.text} | ${country.id}</h2>
                         <a class="btn btn-primary" target="_blank" href="https://evisa.gov.tr/en/apply/" role="button">Go and Apply</a>
                         <p>${country.description}</p>

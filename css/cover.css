@@ -44,17 +44,18 @@ body {
   max-width: 42em;
 }
 
-.delius-unicase-bold {
+/* .delius-unicase-bold {
   font-family: "Delius Unicase", cursive;
   font-weight: 700;
   font-style: normal;
   font-size: 32px;
-}
+} */
 
 .madimi-one-regular {
   font-family: "Madimi One", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 32px;
 }
 
 /*
@@ -141,6 +142,11 @@ body {
 
 .select2-results > .select2-results__options > .select2-results__option{
   color: #000 !important;
+}
+
+.select2-container .select2-selection--single {
+  height: 32px !important;
+
 }
 
 /*

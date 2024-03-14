@@ -32,8 +32,14 @@ $(document).ready(function() {
                     <div class="card-body">
                         <img class="img-fluid" width="256" src="${country.flag}" alt="Flag of ${country.country}">
                         <h2>${country.text} | ${country.id}</h2>
-                        <a class="btn btn-primary" target="_blank" href="${country.url}" role="button">Further Action</a>
-                        <p>${country.description}</p>
+                        <a 
+                            class="btn btn-primary btn-sm" 
+                            target="_blank" 
+                            href="${country.url}" 
+                            role="button">
+                            Get More Information
+                        </a>
+                        <p class="lead">${country.description}</p>
                     </div>
                 </div>
             `;
@@ -46,7 +52,7 @@ $(document).ready(function() {
                         You probably need to have a valid visa for your travel to Turkey. For futher information:
                         </p>
                         <a 
-                            class="btn btn-primary" 
+                            class="btn btn-primary btn-sm" 
                             target="_blank" 
                             href="https://visaft.com/stuttgart/visa-required-documents.php" 
                             role="button">

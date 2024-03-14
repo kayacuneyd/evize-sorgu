@@ -27,10 +27,11 @@ $(document).ready(function() {
             document.getElementById('result').innerHTML = `
                 <div class="card mx-auto">
                     <div class="card-body">
-                        <h2>${country.text}</h2>
-                        <!-- Detayları burada gösterebilirsiniz, örneğin: -->
-                        <!-- <p>Kod: ${country.id}</p> -->
-                        <!-- İhtiyacınıza göre burayı özelleştirebilirsiniz -->
+                    <img class="img-fluid" width="512" src="${country.flag_url}" alt="Flag of ${country.country}">
+                    <h2>${country.text}</h2>
+                    <p>${country.status}</p>
+                    <a class="btn btn-primary" target="_blank" href="https://evisa.gov.tr/en/apply/" role="button">Go and Apply</a>
+                    <p>Kod: ${country.id}</p>
                     </div>
                 </div>
             `;

@@ -7,7 +7,7 @@ async function loadAndInitializeSelect2() {
     allCountries = data.countries.map(country => ({
         id: country.code, // id olarak ülke kodunu kullanıyoruz
         text: country.country, // text olarak ülke ismini kullanıyoruz
-        flag: country.country_url,
+        flag: country.flag_url,
         description: country.status
     }));
 

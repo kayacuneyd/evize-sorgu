@@ -7,9 +7,9 @@ $(document).ready(function() {
             delay: 250, // Klavye girişlerinden sonra istek yapmadan önce bekleyecek süre (ms)
             processResults: function (data) {
                 return {
-                    results: data.countries.map(item => ({
-                        id: item.code, // Her ülkenin benzersiz id'si, burada ülke kodu kullanıldı
-                        text: item.country // Gösterilecek metin
+                    results: data.countries.map(country => ({
+                        id: country.code,
+                        text: country.country,
                     }))
                 };
             },

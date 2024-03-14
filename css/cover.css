@@ -158,6 +158,10 @@ body {
     color: black;
 }
 
+.app-inner-footer > p{
+  margin-bottom: 0 !important;
+}
+
 .footer-text {
   color: #333;
 }

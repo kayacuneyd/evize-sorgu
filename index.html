@@ -10,7 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
     <link href="css/cover.css" rel="stylesheet">
+
 </head>
 <body body class="text-center">   
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
@@ -25,7 +27,8 @@
             <div class="lc-block mb-4" id="sorgu"> 
                 <h4 class="cover-heading">Look for your status!</h4>
                 <div class="input-group mb-3">
-                    <input type="text" id="countryInput" class="form-control" placeholder="Country name" aria-label="Type your country name" aria-describedby="basic-addon2">
+                    <!-- input type="text" id="countryInput" class="form-control" placeholder="Country name" aria-label="Type your country name" aria-describedby="basic-addon2" !-->
+                    <select id="countrySelect" style="width: 100%"></select>
                     <div class="input-group-append">
                         <button class="btn btn-primary" onclick="searchCountry()" type="button">Search</button>
                     </div>
@@ -38,6 +41,7 @@
             </div>
             <div class="lc-block mb-4">
                 <div class="d-flex flex-wrap justify-content-center gap-3">
+                    
                     <div id="result"></div>
                 </div>
             </div>
@@ -48,8 +52,8 @@
             </div>
         </footer>
     </div>
-
-    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/jquery-slim.min.js"><\/script>')</script>
@@ -58,5 +62,6 @@
     <a title="GDPR-compliant Web Analytics" href="https://clicky.com/101446740"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
     <script async src="//static.getclicky.com/101446740.js"></script>
     <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101446740ns.gif" /></p></noscript>
+    <script src="app.js"></script>
 </body>
 </html>

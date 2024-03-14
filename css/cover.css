@@ -143,3 +143,15 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+
+.app-inner-footer{
+  background-color: #e6e6e6c7;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    color: black;
+}
+
+.footer-text {
+  color: #333;
+}
